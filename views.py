@@ -12,7 +12,7 @@ def profile(request):
     parsedData = []
     if request.method == 'POST':
         username = request.POST.get('user')
-        req = requests.get('https://api.github.com/users/' + username)
+        r = requests.get('https://api.github.com/users/' + username)
         jsonList = []
         # r = requests.get('https://api.github.com/users/rigondeaux')
         jsonList.append(json.loads(r.content))
